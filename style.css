@@ -9,7 +9,7 @@ body {
 a {
     display: inline-block;
     width: 90%;
-    height: 25vh;
+    height: 25%;
     margin: 1%;
 
     font-size: 150%;
@@ -17,7 +17,7 @@ a {
     text-decoration: none;
     color: black;
 
-    border: 4px solid DimGray;
+    border: 4px solid #505050;;
     background-color: Gray;
 }
 
@@ -50,19 +50,17 @@ a:hover {
 .image {
     position: relative;
     width: 100%;
-    height: 25vh;
     z-index: 1;
 }
 
 .text {
-    position: absolute;
+    position: relative;
     top: -5%;
-    left: 50%;
+    left: 0%;
     transform: translate(-50%, -50%);
 
     padding: 1%;
-    background-color: DimGray;
-    border-radius: 1rem 1rem 0 0;
+    background-color: #505050;
 
     z-index: 2;
 }
