@@ -48,8 +48,11 @@ a:hover {
 }
 
 .image {
+    position: relative;
     width: 100%;
     height: 25vh;
+
+    z-index: 1;
 }
 
 .text {
@@ -62,12 +65,12 @@ a:hover {
     background-color: DimGray;
     border-radius: 1rem 1rem 0 0;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (min-width: 1700px) {
 
     a {
-        width: 30%;
+        width: 40%;
     }
 }
