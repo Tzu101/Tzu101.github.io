@@ -1,2 +1,2 @@
 # Tzu101.github.io
-A visual display for html projects
+A visual display for web projects
