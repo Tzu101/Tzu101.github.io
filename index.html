@@ -3,34 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tzu101 Github</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <div id="title">
-      <b> Tzu101 Github </b>
-    </div>
+      <header class="header">
+      </header>
 
-    <div id="projects">
-      <a href="/MapGenerator">
-        <b class="text"> Map generator </b>
-        <img class="image" src="Images/CombinedImg.png" alt="" />
-      </a>
-      <a href="/ModelDisplay">
-        <b class="text"> Model display </b>
-        <img class="image" src="Images/Models.png" alt="" />
-      </a>
-      <a href="/FunTextDocumentation">
-        <b class="text"> FunText Documentation </b>
-        <img class="image" src="Images/FunText.PNG" alt="" />
-      </a>
-      <a href="/InteractiveShaders">
-        <b class="text"> Interactive Shaders </b>
-        <img class="image" src="Images/InteractiveShaders.png" alt="" />
-      </a>
-      <!--<a class="project" href="#"> One word website </a>
+      <div class="container">
 
-        <a class="project" href="#"> ... </a>-->
+        <a class="link" href="/FunTextDocumentation">
+          <span class="link__label">FunText animation library</span>
+          <img class="link__image" src="Images/FunText.PNG" alt="Description of the image">
+        </a>
+
+        <a class="link" href="/InteractiveShaders">
+          <span class="link__label">Grass and water interactive shaders</span>
+          <img class="link__image" src="Images/InteractiveShaders.png" alt="Description of the image">
+        </a>
+
+        <a class="link" href="/MapGenerator">
+          <span class="link__label">Maze, terrain and cave generator</span>
+          <img class="link__image" src="Images/CombinedImg.png" alt="Description of the image">
+        </a>
+
+        <a class="link" href="/ModelDisplay">
+          <span class="link__label">Model display</span>
+          <img class="link__image" src="Images/Models.png" alt="Description of the image">
+        </a>
+      </div>
+
+      <footer class="footer"></footer>
+
+      <canvas class="canvas" id="canvas"></canvas>
     </div>
   </body>
 </html>
