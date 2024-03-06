@@ -87,6 +87,23 @@
   // Program uniforms
   const timeLocation = gl.getUniformLocation(shaderProgram, "time");
   const viewportLocation = gl.getUniformLocation(shaderProgram, "viewport");
+  const speedlinesLocation = gl.getUniformLocation(shaderProgram, "speedlines");
+
+  gl.uniform1i(speedlinesLocation, 0);
+  let timeTick = 0.001;
+
+  const linkElements = document.getElementsByClassName("link");
+  for (const link of linkElements) {
+    link.addEventListener("mouseover", () => {
+      timeTick = 0.002;
+      gl.uniform1i(speedlinesLocation, 1);
+    });
+
+    link.addEventListener("mouseout", () => {
+      timeTick = 0.001;
+      gl.uniform1i(speedlinesLocation, 0);
+    });
+  }
 
   function resizeCanvas() {
     // Lookup the size the browser is displaying the canvas in CSS pixels.
@@ -96,8 +113,8 @@
     // Check if the canvas is not the same size.
     if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
       // Make the canvas the same size
-      canvas.width = displayWidth;
-      canvas.height = displayHeight;
+      canvas.width = displayWidth / 2;
+      canvas.height = displayHeight / 2;
 
       // Update WebGL viewport
       gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
@@ -116,7 +133,7 @@
   let timePassed = 0.0;
   function renderCanvas() {
     // Pass uniforms
-    timePassed += 0.001;
+    timePassed += timeTick;
     gl.uniform1f(timeLocation, timePassed);
 
     // Clear the canvas

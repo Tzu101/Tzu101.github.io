@@ -95,37 +95,6 @@ body {
   border-top-right-radius: 0.5rem;
 }
 
-/*.link__label::before {
-  content: "";
-
-  position: absolute;
-  right: -1rem;
-  bottom: 0.25rem;
-  transform: translateX(-100%);
-
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--ui-color);
-
-  border-radius: 100%;
-  border-bottom-left-radius: 0;
-}
-
-.link__label::after {
-  content: "";
-
-  position: absolute;
-  right: -1rem;
-  bottom: 0.25rem;
-  transform: translateX(-100%);
-
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--background-color);
-
-  clip-path: circle(50%);
-}*/
-
 .link__image {
   width: 100%;
   height: 100%;
